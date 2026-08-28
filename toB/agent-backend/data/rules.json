@@ -1,0 +1,3 @@
+[
+  {"id":"rules-v1-equipment-sewing","version":"rules-v1","task_type":"equipment_incident","equipment_keyword":"绷缝机","required_roles":[{"role":"repair_owner","count":1,"required":true},{"role":"operator","count":1,"required":true},{"role":"reviewer","count":1,"required":false}],"hard_constraints":["repair_owner 需要 sewing_machine_repair L3 或以上认证","operator 需要 sewing_machine_operation L2 或以上认证","人员必须在岗且允许临时调度","预计到位时间必须不超过 SLA"],"soft_factors":["预计到达时间","当前负载","近30天同类一次解决率","近30天同类返工率","本人明确意愿"],"sla_minutes":10,"review_required":true,"fallback_policy":"无合格主责时升级给设备保障组"}
+]

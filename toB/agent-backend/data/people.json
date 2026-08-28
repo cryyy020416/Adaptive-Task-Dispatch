@@ -1,0 +1,10 @@
+[
+  {"id":"person_1024","name":"王建国","badge_id":"B-021","team":"3号线维修组","plant":"杭州一厂","allowed_cross_line":true},
+  {"id":"person_1031","name":"赵敏","badge_id":"B-055","team":"维修二组","plant":"杭州一厂","allowed_cross_line":true},
+  {"id":"person_1042","name":"李秀兰","badge_id":"B-118","team":"3号线操作组","plant":"杭州一厂","allowed_cross_line":false},
+  {"id":"person_1058","name":"陈亮","badge_id":"B-207","team":"维修学习组","plant":"杭州一厂","allowed_cross_line":true},
+  {"id":"person_1066","name":"周师傅","badge_id":"B-302","team":"设备保障组","plant":"杭州一厂","allowed_cross_line":true},
+  {"id":"person_1070","name":"林晓","badge_id":"B-314","team":"2号线操作组","plant":"杭州一厂","allowed_cross_line":false},
+  {"id":"person_1081","name":"高峰","badge_id":"B-327","team":"质量组","plant":"杭州一厂","allowed_cross_line":true},
+  {"id":"person_1093","name":"孙梅","badge_id":"B-339","team":"1号线操作组","plant":"杭州一厂","allowed_cross_line":false}
+]

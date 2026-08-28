@@ -1,0 +1,10 @@
+[
+  {"person_id":"person_1024","skill":"sewing_machine_repair","skill_name":"绷缝机维修","level":3,"certified_until":"2027-08-28","roles":["repair_owner","trainee"]},
+  {"person_id":"person_1031","skill":"sewing_machine_repair","skill_name":"绷缝机维修","level":3,"certified_until":"2027-02-12","roles":["repair_owner","trainee"]},
+  {"person_id":"person_1042","skill":"sewing_machine_operation","skill_name":"绷缝机操作","level":2,"certified_until":"2028-01-05","roles":["operator","reviewer"]},
+  {"person_id":"person_1058","skill":"sewing_machine_repair","skill_name":"绷缝机维修","level":2,"certified_until":"2027-09-18","roles":["trainee"]},
+  {"person_id":"person_1066","skill":"sewing_machine_repair","skill_name":"绷缝机维修","level":4,"certified_until":"2028-05-20","roles":["repair_owner","reviewer","escalation_contact"]},
+  {"person_id":"person_1070","skill":"sewing_machine_operation","skill_name":"绷缝机操作","level":2,"certified_until":"2027-12-11","roles":["operator"]},
+  {"person_id":"person_1081","skill":"quality_review","skill_name":"首件质量复核","level":3,"certified_until":"2028-03-14","roles":["reviewer"]},
+  {"person_id":"person_1093","skill":"sewing_machine_operation","skill_name":"绷缝机操作","level":2,"certified_until":"2027-11-01","roles":["operator"]}
+]

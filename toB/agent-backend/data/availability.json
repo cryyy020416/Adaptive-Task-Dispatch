@@ -1,0 +1,10 @@
+[
+  {"person_id":"person_1024","status":"available","area":"维修区","current_task_id":null,"can_be_interrupted":true,"distance_meters":32,"updated_at":"2026-08-29T10:24:00+08:00"},
+  {"person_id":"person_1031","status":"busy","area":"2号线","current_task_id":"task_live_014","can_be_interrupted":false,"distance_meters":86,"updated_at":"2026-08-29T10:24:00+08:00"},
+  {"person_id":"person_1042","status":"available","area":"3号线12号工位","current_task_id":null,"can_be_interrupted":true,"distance_meters":0,"updated_at":"2026-08-29T10:24:00+08:00"},
+  {"person_id":"person_1058","status":"available","area":"维修区","current_task_id":null,"can_be_interrupted":true,"distance_meters":18,"updated_at":"2026-08-29T10:24:00+08:00"},
+  {"person_id":"person_1066","status":"busy","area":"设备仓","current_task_id":"task_live_015","can_be_interrupted":true,"distance_meters":110,"updated_at":"2026-08-29T10:24:00+08:00"},
+  {"person_id":"person_1070","status":"offline","area":"2号线","current_task_id":null,"can_be_interrupted":false,"distance_meters":120,"updated_at":"2026-08-29T10:20:00+08:00"},
+  {"person_id":"person_1081","status":"available","area":"质量站","current_task_id":null,"can_be_interrupted":true,"distance_meters":40,"updated_at":"2026-08-29T10:24:00+08:00"},
+  {"person_id":"person_1093","status":"available","area":"1号线","current_task_id":null,"can_be_interrupted":true,"distance_meters":150,"updated_at":"2026-08-29T10:24:00+08:00"}
+]

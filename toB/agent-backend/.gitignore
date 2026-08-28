@@ -1,0 +1,4 @@
+dispatch.sqlite
+dispatch.sqlite-shm
+dispatch.sqlite-wal
+.env
