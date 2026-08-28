@@ -29,21 +29,44 @@ SparkLink 将“适合”拆成可以解释和复核的事实：
 
 ## 系统如何运行
 
+下面按“输入 → 判断 → 派发 → 执行 → 沉淀”的顺序阅读。橙色节点表示需要人做最终确认，虚线表示历史数据会回流到下一次推荐。
+
 ```mermaid
-flowchart LR
-    A[现场异常输入] --> B[任务解析 Agent]
-    B --> C[完整性校验]
-    C --> D[规则库 / DispatchSpec]
-    D --> E[硬约束过滤]
-    E --> F[实时状态 + 历史指标排序]
-    F --> G[组长确认]
-    G --> H[工牌邀请]
-    H --> I[接受 / 拒绝 / 超时]
-    I --> J[碰牌组队与到场]
-    J --> K[执行与复核]
-    K --> L[事件日志与历史行为更新]
-    L -.-> F
+flowchart TD
+    A["① 现场触发<br/>异常描述 · 图片 · 设备告警"] --> B["② 任务解析 Agent<br/>提取类型 · 地点 · 影响 · SLA"]
+    B --> C{"③ 信息完整？"}
+    C -->|否：追问 / 人工修正| B
+    C -->|是| D["④ 规则展开<br/>规则库 → DispatchSpec"]
+    D --> E["⑤ 硬约束筛选<br/>资格 · 权限 · 在岗 · SLA"]
+    E --> F["⑥ 动态排序<br/>实时状态 + 历史表现"]
+    F --> G["⑦ 组长确认<br/>查看理由 · 调整人员"]
+    G --> H["⑧ 工牌邀请<br/>任务 · 角色 · 地点 · 截止时间"]
+    H --> I{"⑨ 员工是否接受？"}
+    I -->|拒绝 / 超时| J["补位或升级<br/>记录原因"]
+    J --> F
+    I -->|接受| K["⑩ 碰牌组队 + NFC 到场"]
+    K --> L["⑪ 执行任务<br/>进度 · 异常 · 超时"]
+    L --> M{"⑫ 复核通过？"}
+    M -->|否：返修| L
+    M -->|是| N["⑬ 完成闭环<br/>事件日志 + 历史行为更新"]
+    N -.->|新数据参与下一次排序| F
+
+    classDef ai fill:#eef2ff,stroke:#6366f1,color:#1e1b4b;
+    classDef rule fill:#ecfdf5,stroke:#10b981,color:#064e3b;
+    classDef human fill:#fff7ed,stroke:#f97316,color:#7c2d12;
+    classDef state fill:#f0f9ff,stroke:#0ea5e9,color:#0c4a6e;
+    classDef decision fill:#f8fafc,stroke:#64748b,color:#17202b;
+    classDef log fill:#f5f3ff,stroke:#8b5cf6,color:#4c1d95;
+
+    class B ai;
+    class D,E rule;
+    class G,H human;
+    class F,K,L state;
+    class C,I,M decision;
+    class N,J log;
 ```
+
+图中的职责边界可以简单理解为：AI 负责“听懂和解释”，规则负责“能不能做”，状态与历史负责“此刻谁更合适”，组长负责“最终确认”，工牌负责“现场协作”，日志负责“留下可复盘的事实”。
 
 一次任务的最小闭环是：
 
